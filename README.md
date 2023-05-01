@@ -1,3 +1,9 @@
+# Errors
+There is some errors in Josh's config for 4.1. Security group config should specify VPC like this:
+`vpc_id = module.vpc.vpc_id`
+And it is necessary to add a line to the instance config:
+`subnet_id = module.vpc.public_subnets[0]`
+
 # Learning Terraform
 This is the repository for the LinkedIn Learning course Learning Terraform. The full course is available from [LinkedIn Learning][lil-course-url].
 
